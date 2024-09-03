@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
 }
 
@@ -10,14 +10,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 800px;
-  background-color: #bf7f58;
+  min-height: 900px;
+  min-width: fit-content;
+  background-color: #110f0e;
   position: center;
 }
 
 .hero-text {
-  text-alight: center;
-  color: bisque;
+  text-align: center;
+  color: rgb(245, 243, 240);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,12 +39,108 @@ body {
 }
 
 .visit-button:hover {
-  background-color: #fff;
-  color: #bf7f58;
+  background-color: #5b0b0b;
+  color: #f6f3f1;
 }
 
 h1 {
   font-size: 60px;
+}
+
+.column50 {
+  flex: 50%;
+  padding: 15px;
+}
+.grad1 {
+  height: 200px;
+  background-image: linear-gradient(
+    to right,
+    #bf7f58,
+    rgba(115, 86, 8, 0.104),
+    beige
+  );
+  margin-bottom: 15px;
+}
+
+.navbar a {
+  text-align: left;
+}
+
+iframe.myIframe {
+  width: 100%;
+  height: 560px;
+  border: solid 10px red;
+  margin-bottom: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: solid 1px brown;
+  text-align: left;
+  padding: 10px;
+}
+th {
+  background-color: rgb(97, 84, 7);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+//Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url("path-to-hero-image.jpg");
+  background-size: cover;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #92612c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 @media print {
@@ -59,95 +156,4 @@ h1 {
   .navbar {
     flex-direction: column;
   }
-
-  .navbar a {
-    text-align: left;
-  }
-}
-
-body {
-  background: #efefef;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-h1 {
-  font-size: 82px;
-}
-h2 {
-  font-size: 45px;
-}
-a {
-  color: #000000eb;
-}
-a:hover {
-  color: #000;
-  text-decoration: wavy;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --orange: #f2c14e;
-  --winning-blocks: #06537a;
-}
-
-body {
-  color: var(--orange);
-  font-family: "Finger Paint", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif sans-serif;
-}
-h1 {
-  font-size: 54px;
-  text-transform: uppercase;
-}
-
-.container {
-  padding: 40px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #37505c;
-}
-
-#gameboard {
-  width: 450px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-.box {
-  height: 150px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--orange);
-  font-size: 120px;
-  border-right: 2px solid;
-  border-bottom: 2px solid;
-}
-.box:nth-child(3n) {
-  border-right: none;
-}
-.box:nth-child(6) ~ .box {
-  border-bottom: none;
-}
-button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: var(--orange);
-  color: #333;
-  border-color: var(--orange);
-  font-size: 18px;
-  transition: 200ms transform;
-  font-weight: 600;
-}
-button:hover {
-  cursor: pointer;
-  transform: translateY(-2px);
 }
