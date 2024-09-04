@@ -1,17 +1,18 @@
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    let valid = true;
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+$(document).ready(function () {
+  console.log("testing jquery");
+  $("p").css({ color: "red", "margin-top": "20px" });
+  $("#myTag").css({ color: "blue", "margin-top": "20px" });
+  $("[href]").css("color", "#777");
 
-    if (name === "" || email === "" || message === "") {
-      valid = false;
-      alert("Please fill out all fields.");
-    }
-
-    if (!valid) {
-      event.preventDefault();
-    }
+  $("#hide").on("click", function () {
+    $("p").hide();
   });
+
+  $("#show").on("click", function () {
+    $("p").show();
+  });
+
+  $("#toggle").on("click", function () {
+    $("h1").togggle();
+  });
+});
